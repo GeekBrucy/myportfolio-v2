@@ -3,3 +3,4 @@ prepros-6.config
 test.*
 .cache
 dist/
+test/
