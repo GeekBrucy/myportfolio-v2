@@ -1,0 +1,107 @@
+#pg-header
+  width: 100%;
+  font-size: .26rem
+  nav
+    padding: .24rem .6rem
+    line-height: .6rem
+    display: flex
+    justify-content: space-between
+    border-bottom: .02rem solid #ededed
+  ul li
+    display: inline-block
+    a
+      color: $black
+      transition: color .3s ease
+      &:hover
+        color: $mainYellow
+  .main-nav li
+    margin-right: .4rem
+    a
+      display: block
+  .cart
+    margin-left: .4rem
+    padding-left: .4rem
+    border-left: .02rem solid #ededed
+    i
+      font-size: .32rem
+      margin-right: .02rem
+      padding-right: .08rem
+      color: $mainYellow
+    a
+      font-size: .32rem
+      font-weight: bold
+    .cart-info
+      margin: 0 .2rem
+  .cart-sidebar
+    display: none
+@include responsive(992px, 320px)
+  #pg-header
+    visibility: hidden
+    height: 0
+    .cart-text
+      display: none
+    .cart
+      visibility: visible
+      border: 0
+      background-color: $black
+      display: flex
+      position: fixed
+      top: 0
+      right: 0
+      justify-content: center
+      align-items: center
+      height: 1.1rem
+      // line-height: 1.06rem
+      color: #fff !important
+      z-index: 9998
+      margin: 0
+      padding: 0
+      .fas
+        font-size: .5rem
+        color: #fff
+    .cart-sidebar
+      visibility: hidden
+      overflow: hidden
+      display: block
+      opacity: 0
+      position: fixed
+      top: 1.12rem
+      right: 0
+      width: 0
+      height: 100%
+      padding: .34rem .32rem
+      z-index: 9999
+      background-color: #fff
+      transition: all .3s ease
+    .cart-sidebar.active
+      width: 6.4rem
+      visibility: visible
+      opacity: 1
+    .cart.searching
+      z-index: 999
+    .nav-container
+      visibility: hidden
+      opacity: 0
+      position: fixed
+      top: 1.12rem
+      right: 0
+      width: 0
+      height: 100%
+      background-color: #fff
+      box-shadow: .06rem 0 .4rem 0 rgba(0,0,0,.25);
+      z-index: 9999
+      transition: all .3s ease
+      .main-nav
+        background-color: #fff
+        display: flex
+        flex-direction: column
+        li
+          font-weight: bold
+          border-bottom: .02rem solid $iconGrey
+          margin: 0
+          a
+            padding: .34rem .32rem
+    .nav-container.active
+      width: 6.4rem
+      visibility: visible
+      opacity: 1

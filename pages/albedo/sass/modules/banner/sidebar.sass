@@ -1,0 +1,95 @@
+.sidebar
+  position: fixed
+  z-index: 900
+  top: 2.72rem
+  bottom: 0
+  left: 0
+  width: 0
+  transition: all .3s ease
+  .sidebar-menu
+    position: absolute
+    top: 0
+    left: -100%
+    width: 100%
+    height: 100%
+    background-color: #fff
+    transition: all .3s ease
+    box-shadow: .06rem .06rem .6rem rgba(0, 0, 0, .3)
+    padding-top: .6rem
+    font-size: .26rem
+    visibility: hidden
+    opacity: 0
+    a
+      color: $black
+    .sb-menu-item
+      padding: .2rem .6rem
+      border-bottom: .02rem solid $bgGrey
+      cursor: pointer
+      position: relative
+      ul.prod-type
+        font-size: .28rem
+        background: #fff
+        left: 4.5rem
+        top: .3rem
+        opacity: 0
+        visibility: hidden
+        position: absolute
+        z-index: 9999
+        padding: .3rem .6rem
+        width: 100%
+        box-shadow: 0 0 .6rem .2rem rgba(0,0,0,.06)
+        transition: all .3s ease
+        li
+          padding: .1rem 0
+          a:hover
+            color: $mainYellow
+      & > i.fas
+          color: $black
+          float: right
+          transition: all .3s ease
+      &:hover
+        .item-link, & > i
+          color: $mainYellow
+        & > i
+          transform: rotate(-90deg)
+      &:last-child:hover
+        ul.prod-type
+          visibility: visible
+          opacity: 1
+          top: 0
+    .sb-menu-item.onhover
+      & > a
+        color: $mainYellow
+      & > a
+        color: $mainYellow
+        transform: rotate(-90deg)
+.sidebar.scroll
+  top: 1.12rem
+
+@include responsive(992px, 320px)
+  .sidebar, .sidebar.scroll
+    top: 1.12rem
+    overflow: auto !important
+    background-color: #fff
+    .sidebar-menu
+      font-size: .3rem
+      padding-top: .3rem
+      box-shadow: none
+      .sb-menu-item
+        padding: .34rem .3rem
+        & > a
+          font-weight: bold
+        ul.prod-type
+          overflow: hidden
+          height: 0
+          padding: 0
+          background: transparent
+          box-shadow: none
+          position: static
+          margin-left: .3rem
+        &:last-child:hover
+          ul
+            margin-top: .1rem
+            visibility: visible
+            opacity: 1
+            height: auto

@@ -1,0 +1,141 @@
+@import './sidebar.sass'
+@import './searchbar.sass'
+@import './category.sass'
+#pg-banner
+  .banner-header
+    width: 100%
+    height: 1.12rem
+    margin: .24rem 0
+    font-size: .4rem
+    background-color: #fff
+    display: flex
+    justify-content: space-between
+    align-items: center
+    position: relative
+    transition: all .3s ease
+    z-index: 999
+    .burger-icon, .search-icon, .user-icon
+      display: inline-block
+      width: 1.12rem
+      height: 1.12rem
+      text-align: center
+      line-height: 1.12rem
+      cursor: pointer
+    .search-icon
+      color: $mainYellow
+      z-index: 9999
+      &:hover
+        color: #191919
+    .user-icon
+      display: none
+  & > .logo-container
+    display: none
+  .banner-body
+    position: relative
+    width: 100%
+    height: 13rem
+    overflow: hidden
+    &:hover
+      .overlay
+        @include implementOverlay(rgba(245, 245, 245, .2))
+      .banner-pic
+        transform: scale(1.1)
+    .banner-pic
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      bottom: 0
+      z-index: -1
+      transition: all .5s ease
+    .banner-text
+      z-index: 2
+      width: 12rem
+      color: #fff;
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      right: 1%
+      h3
+        font-size: .36rem
+        margin-bottom: .6rem
+      h1
+        font-size: 1.2rem
+        margin-bottom: .86rem
+      button
+        @include btnStyle
+  .banner-header.scroll
+    position: fixed
+    margin: 0
+    top: 0
+    left: 0
+    box-shadow: 0 .06rem .08rem rgba(0, 0, 0, .2)
+    animation: show .5s ease
+@keyframes show
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+@include responsive(992px, 320px)
+  #pg-banner
+    .banner-header
+      margin: 0
+      position: fixed
+      top: 0
+      left: 0
+      background-color: $black
+      color: #fff
+      box-shadow: 0 .06rem .4rem 0 rgba(0,0,0,.25);
+      transition: none
+      .search-icon
+        position: fixed
+        top: 0
+        right: 3rem
+        color: #fff !important
+        transition: all .1s ease
+      div.search-icon.searching
+        right: .2rem !important
+        color: $black !important
+      .user-icon
+        display: block
+        position: fixed
+        top: 0
+        right: 2.2rem
+        color: #fff
+      .logo-container
+        display: none
+    .banner-header.scroll
+      animation: none
+    .logo-container
+      display: block
+      position: relative
+      // top: 1.74rem
+      width: 100%
+      height: .94rem
+      .pg-logo
+        position: absolute
+        top: 1.5rem
+        left: 50%
+        transform: translateX(-50%)
+    .banner-body
+      margin-top: 2.4rem
+      height: 2.6rem
+      .banner-text
+        top: 50%
+        transform: translateY(-50%)
+        right: 7%
+        width: 3rem
+        height: 1.8rem
+        display: flex
+        flex-direction: column
+        h3
+          font-weight: normal
+          font-size: .28rem
+          margin-bottom: .06rem
+        h1
+          font-weight: normal
+          font-size: .34rem
+          margin-bottom: .1rem
+        button
+          padding: .03rem .4rem

@@ -1,0 +1,139 @@
+#about-info-contact
+  width: 100%
+  margin: 0 auto
+  margin-top: 1.2rem
+  display: flex
+  justify-content: center
+  flex-wrap: wrap
+  color: $fontGrey
+  a
+    color: $fontGrey
+    transition: all .3s ease
+    &:hover
+      color: $mainYellow
+  .show-more
+    color: $black
+    font-size: .32rem
+    margin-bottom: .48rem
+    .fas
+      display: none
+  h3
+    font-size: .32rem
+    .fas
+      display: none
+  p, a, li
+    font-size: .26rem
+  p
+    margin-bottom: .26rem
+    line-height: .44rem
+  & > *
+    padding: 0 .4rem
+    width: 4.64rem
+    height: 8rem
+    border-right: .02rem solid $bgGrey
+  & > div:first-child
+    width: 6.96rem
+  & > div:last-child
+    padding-right: 0 !important
+    width: 6.96rem
+    border-right: 0
+  .about, .store-info
+    .top
+      margin-bottom: .8rem
+      padding-bottom: .54rem
+      border-bottom: .02rem solid $bgGrey
+    .bottom
+      h3
+        margin-bottom: .48rem
+      li
+        display: inline-block
+        width: .8rem
+        height: .8rem
+      a
+        color: #fff
+        line-height: .8rem
+        text-align: center
+        border-radius: 50%
+        font-size: .3rem
+        display: block
+        background-color: $black
+        width: 100%
+        height: 100%
+        transition: all .3s ease
+        &:hover
+          background-color: $mainYellow
+  .info li, .why-us li, .my-acc li, .store-info .top li
+    height: .62rem
+    padding: .1rem 0
+  .store-info
+    .top li i
+      margin-right: .2rem
+    input
+      padding: .26rem .36rem
+      background-color: $bgGrey
+      width: 4.48rem
+    button
+      @include btnStyle
+      background-color: $mainYellow
+      color: #fff
+      border-color: $mainYellow
+      &:hover
+        border-color: #000
+@include responsive(1221px, 320px)
+  #about-info-contact
+    width: 100%
+    margin: 0 !important
+    display: block
+    padding: 1.12rem .4rem
+    & > *
+      padding: 0
+      float: none
+      width: 100% !important
+      height: auto
+      border: 0
+      transition: all .5s ease
+      h3
+        margin-top: .5rem
+        font-size: .4rem
+      h3:first-child
+        margin-top: 0
+    .collapse
+      overflow: hidden
+      height: 0
+      margin: 0
+    .collapse.open
+      height: auto
+      margin-bottom: .2rem
+    .about .top, .store-info .top
+      margin: 0
+      padding: 0
+      border: 0
+    .store-info .bottom
+      text-align: center
+      h3
+        color: $black
+        font-size: .34rem
+    .about
+      .bottom
+        display: none
+    .show-more
+      @include clearFix
+      width: 100%
+      h3
+        float: left
+      .fas
+        display: block
+        float: right
+        text-align: center
+        line-height: .52rem
+        width: .52rem
+        border: .02rem solid $black
+
+@include responsive(1756px, 1025px)
+  #about-info-contact
+    // text-align: center
+    justify-content: space-between
+    & > *
+      border: 0
+      width: auto
+      // width: 50%

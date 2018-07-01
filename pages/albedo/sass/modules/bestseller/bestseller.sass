@@ -1,0 +1,105 @@
+#best-seller
+  width: 80%
+  margin: 0 auto
+  margin-top: .84rem
+  .bs-header
+    margin-bottom: .64rem
+    text-align: center
+    position: relative
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      left: 0
+      bottom: .16rem
+      height: .02rem
+      width: 100%
+      background-color: $bgGrey
+    strong
+      position: relative
+      display: inline-block
+      font-size: .32rem
+      padding: 0 .4rem
+      background-color: #fff
+      z-index: 3
+  .bs-content
+    display: flex
+    justify-content: space-between
+    .bs-item
+      width: 23%
+      padding: .6rem
+      border: 1px solid $bgGrey
+      position: relative
+      .view-item
+        background-color: $mainYellow
+        text-align: center
+        line-height: .8rem
+        color: #fff
+        position: absolute
+        display: inline-block
+        width: .8rem
+        height: .8rem
+        font-size: .44rem
+        border-radius: 50%
+        left: 50%
+        transform: translateX(-50%)
+        top: -10%
+        opacity: 0
+        visibility: hidden
+        transition: all .3s ease
+      &:hover
+        .view-item
+          visibility: visible
+          opacity: 1
+          top: 30%
+      .item-img
+        overflow: hidden
+        max-width: 100%
+        background: #f0f0f0
+        margin-bottom: .2rem
+        img
+          display: block
+          width: 100%
+      .item-name
+        font-size: .26rem
+        margin-bottom: .14rem
+        @include ellipsis
+        a
+          color: $fontGrey
+          transition: color .3s ease
+          &:hover
+            color: $mainYellow
+      .item-price
+        font-size: .38rem
+      .item-btn
+        float: left
+        button
+          @include btnStyle(#000, $mainYellow)
+      .item-icon
+        float: right
+        i
+          cursor: pointer
+          transition: color .3s ease
+          font-size: .36rem
+          color: $iconGrey
+          &:hover
+            color: $mainYellow
+
+
+@include responsive(992px, 320px)
+  #best-seller
+    margin-top: .3rem
+    .bs-header
+      margin-bottom: .3rem
+    .bs-content
+      flex-direction: column
+      .bs-item
+        width: 100%
+        margin-bottom: .5rem
+@include responsive(1024px, 812px)
+  #best-seller
+    .bs-content
+      flex-direction: row
+      flex-wrap: wrap
+      .bs-item
+        width: 45%

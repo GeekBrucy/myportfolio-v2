@@ -1,0 +1,105 @@
+/* Common CSS START */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html, body {
+  font-size: 20px;
+  height: 100%;
+}
+h1 {
+  font-size: 2.5rem;
+}
+i {
+  font-style: normal
+}
+/* Common CSS END */
+
+/************************* .pg-content START *************************/
+.pg-content {
+  overflow: auto;
+  background-color: #000;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+.pg-content .overlay {
+  overflow: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+/*********** .pg-content .pg-header START ***********/
+.pg-header h1 {
+  font-size: 4rem;
+  color: #fff;
+}
+header.pg-header,
+h1.location-weather {
+  margin: 1.5rem 0;
+}
+h1.location-weather .icon {
+  vertical-align: middle;
+}
+/*********** .pg-content .pg-header END ***********/
+
+/*********** .pg-content .content START ***********/
+.pg-content .content {
+  /* positioning */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* typography */
+  color: #fff;
+  text-align: center;
+}
+.pg-content .content .location-weather span{
+  margin-right: .1rem;
+}
+/*********** .pg-content .content END ***********/
+
+/*********** .pg-content .content .content-body .weather-info START ***********/
+.pg-content .content .weather-info {
+  margin: 1rem 0;
+  text-transform: capitalize
+}
+
+.weather-info-item{
+  padding-bottom: .5rem;
+  font-size: 1.25rem;
+}
+.weather-info-item-key, .weather-info-item-value {
+  display: inline-block;
+  width: 47%;
+}
+.weather-info-item-key {
+  text-align: right;
+  margin-right: .5rem;
+}
+.weather-info-item-value {
+  text-align: left;
+  padding-right: 1rem;
+}
+.weather-info-item-value .temp-value {
+  display: inline-block;
+}
+.btn-celtofah {
+  font-size: 1.5rem;
+  padding: 0 .5rem;
+  background-color: transparent;
+  color: #fff;
+  border: 2px outset #ccc;
+  outline: 0;
+  cursor: pointer
+}
+/*********** .pg-content .content .content-body .weather-info END ***********/
+
+/************************* pg-content END *************************/

@@ -1,0 +1,32 @@
+#pg-footer
+  margin-top: 1.28rem
+  color: $black
+  background-color: $bgGrey
+  padding: .4rem
+  p
+    font-size: .26rem
+    margin-left: .5rem
+  img
+    display: block
+  .container
+    padding: 0 .4rem
+    width: 80%
+    margin: 0 auto
+    display: flex
+    align-items: center
+
+@include responsive(992px, 320px)
+  #pg-footer
+    margin-top: 0
+    .container
+      width: 100%
+      padding: 0
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      img
+        margin-bottom: .2rem
+      p
+        text-align: center
+        margin-left: 0
+        color: $fontGrey

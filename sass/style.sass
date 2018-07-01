@@ -1,1 +1,14 @@
+// basic settings, tools
 @import './common/variables.sass', './common/reset.sass', './common/mixins.sass'
+
+
+// modules
+@import './modules/header-sidebar/header-sidebar.sass'
+
+body
+  background: url(../../../test/6.jpg) no-repeat
+  background-position: center
+  background-size: cover
+  position: relative
+  & > .overlay
+    @include implementOverlay(rgba(173, 176, 183, .5))

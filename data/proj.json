@@ -1,0 +1,82 @@
+[
+  {
+    "name": "albedo",
+    "category": "Website Clone",
+    "link": "./pages/albedo/index.html",
+    "snapshot": "https://image.ibb.co/jcN478/albedo_clone.png",
+    "tech": ["html5", "css3", "javascript", "sass"],
+    "desc": "A website clone, source from https://ld-magento.template-help.com/magento_64692/"
+  },
+  {
+    "name": "apptheme",
+    "category": "Website Clone",
+    "link": "./pages/apptheme/index.html",
+    "snapshot": "https://image.ibb.co/cJdXsJ/apptheme.png",
+    "tech": ["html5", "css3", "flexbox"],
+    "desc": "A website clone, source from https://ld-magento.template-help.com/magento_64692/"
+  },
+  {
+    "name": "local weather",
+    "category": "Free Code Camp",
+    "link": "./pages/fcc-local-weather/index.html",
+    "snapshot": "https://image.ibb.co/msuDRT/fcc_weather.png",
+    "tech": ["html5", "css3", "javascript", "fetch api", "responsive"],
+    "desc": "A website clone, source from https://ld-magento.template-help.com/magento_64692/"
+  },
+  {
+    "name": "Random Quotes",
+    "category": "Free Code Camp",
+    "link": "./pages/fcc-RndQuotes/index.html",
+    "snapshot": "https://image.ibb.co/hSaZ6d/rndquote.png",
+    "tech": ["html5", "css3", "javascript", "ajax"],
+    "desc": "A website clone, source from https://ld-magento.template-help.com/magento_64692/"
+  },
+  {
+    "name": "TwitchTV",
+    "category": "Free Code Camp",
+    "link": "./pages/fcc-twitchTV/index.html",
+    "snapshot": "https://image.ibb.co/gRTJt8/fcc_twitch.png",
+    "tech": ["html5", "css3", "javascript", "ajax - getJSON", "responsive"],
+    "desc": "A website clone, source from https://ld-magento.template-help.com/magento_64692/"
+  },
+  {
+    "name": "Wikipedia Viewer",
+    "category": "Free Code Camp",
+    "link": "./pages/fcc-wikipedia-viewer/index.html",
+    "snapshot": "https://image.ibb.co/cEaCmT/fcc_wiki.png",
+    "tech": ["html5", "css3", "javascript", "ajax", "responsive"],
+    "desc": "A website clone, source from https://ld-magento.template-help.com/magento_64692/"
+  },
+  {
+    "name": "My Blog",
+    "category": "Origin",
+    "link": "./pages/geekbrucy.github.io/index.html",
+    "snapshot": "https://image.ibb.co/cd9rD8/blog_site.png",
+    "tech": ["VueJs", "axios", "marked.js", "Bootstrap 4", "Firebase"],
+    "desc": "A website clone, source from https://ld-magento.template-help.com/magento_64692/"
+  },
+  {
+    "name": "GridBiz",
+    "category": "Website Clone",
+    "link": "./pages/GridBiz/index.html",
+    "snapshot": "https://image.ibb.co/kp2ssJ/gridbiz.png",
+    "tech": ["html5", "css3", "css grid"],
+    "desc": "A website clone, source from https://ld-magento.template-help.com/magento_64692/"
+  },
+  {
+    "name": "Parallax Site",
+    "category": "Website Clone",
+    "link": "./pages/ParallaxSite/index.html",
+    "snapshot": "https://image.ibb.co/kxW7Rd/parallax.png",
+    "tech": ["html5", "css3", "parallax design"],
+    "desc": "A website clone, source from https://ld-magento.template-help.com/magento_64692/"
+  },
+  {
+    "name": "Fast and Faster Car Service",
+    "category": "Website Clone",
+    "link": "./pages/fastAndfaster/index.html",
+    "snapshot": "https://image.ibb.co/niEizy/fast.png",
+    "tech": ["html5", "css3", "css grid", "flexbox"],
+    "desc": "A website clone, source from https://ld-magento.template-help.com/magento_64692/"
+  }
+]

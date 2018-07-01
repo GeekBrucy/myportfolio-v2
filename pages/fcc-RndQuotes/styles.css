@@ -1,0 +1,24 @@
+a {
+  color: #F35B25;
+  transition: color 0.5s;
+}
+
+.pg-holder{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content.container{
+  min-height: 400px;
+  background-color: #fff;
+}
+
+body{
+  color: #F35B25;
+  background-color: #F35B25;
+  transition: color 0.5s, background-color 0.5s;
+}
+h3.post{
+  height: 200px;
+}
