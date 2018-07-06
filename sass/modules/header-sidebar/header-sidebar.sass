@@ -2,9 +2,10 @@
 
 #pg-content
   display: grid
-  grid-template-columns: 8rem 1fr
-  grid-template-rows: 0 100vh
-  grid-template-areas: "profile content" "profile content"
+  grid-template-columns: 20% 1fr
+  // grid-template-rows: 1.2rem calc(100vh - 1.2rem)
+  grid-template-rows: 2.5rem calc(100vh - 2.5rem)
+  grid-template-areas: "profile filter" "profile content"
   // justify-content: center
   .sidebar-profile
     color: #fff
@@ -26,7 +27,6 @@
     .my-desc
       padding: .7rem 0 .3rem 0
       text-align: center
-      margin-bottom: .4rem
       border-bottom: .04rem solid $grey
       h1
         font-size: .5rem
@@ -34,32 +34,24 @@
       h3
         font-size: .3rem
         line-height: .5rem
-    .my-proj-filter
-      // text-align: center
-      font-size: .3rem
-      .filter-item
-        display: inline-block
-        padding: .1rem .2rem
-        color: $black
-        background-color: #fff
-        margin-bottom: .08rem
-        cursor: pointer
-        transition: all .3s ease
-        &:hover
-          transform: translate(-0.05rem, -0.05rem)
-          background-color: #aaa
-          color: #fff
     .my-contacts
-      padding: .5rem
+      text-align: center
       .contact-item
-        display: flex
-        justify-content: space-between
-        margin-bottom: .5rem
+        padding: .2rem 0
+        border-bottom: .04rem solid $grey
+        span
+          display: block
   .content-container
-    grid-area: content
-    padding: .5rem
-    overflow: auto
+    // grid-area: content
+    padding: .25rem .5rem
+    overflow-y: scroll
+    visibility: hidden
+    // display: none
+    opacity: 0
+    z-index: 0
+    transition: all .3s ease
     .cate-title
+      font-size: .8rem
       width: 100%
       height: auto
       display: flex
@@ -84,6 +76,7 @@
       transition: all .3s ease
     .collapse-item
       height: 0
+      border-radius: .5rem
       padding-bottom: 50%
       background-repeat: no-repeat
       background-position: center
@@ -97,6 +90,7 @@
       .item-overlay
         @include implementOverlay($black-seeThrough)
         height: 0
+        border-radius: .5rem
         overflow: hidden
         transition: all .3s ease
         text-transform: capitalize
@@ -108,15 +102,6 @@
         .item-desc
           font-size: .6rem
           margin-bottom: .4rem
-        .item-tech
-          font-size: .4rem
-          .tech
-            display: inline-block
-            padding: .3rem .4rem
-            margin-right: .2rem
-            background-color: $black
-            &:last-child
-              margin-right: 0
     .items-container.open
       height: auto
       visibility: visible
@@ -129,3 +114,71 @@
       justify-content: space-between
       i.fas
         vertical-align: middle
+    &.activated
+      // height: auto
+      grid-area: content
+      display: block
+      visibility: visible
+      z-index: 1
+      opacity: 1
+  .content-filter
+    color: #fff
+    font-size: .3rem
+    grid-area: filter
+    padding: .1rem .5rem .2rem .5rem
+    display: flex
+    // justify-content: space-around
+    flex-wrap: wrap
+    .tech
+      border-radius: .5rem
+      margin-bottom: .1rem
+      transition: all .3s ease
+      cursor: pointer
+  .filter-result
+    overflow-y: scroll
+    padding: .25rem .5rem
+    // display: none
+    visibility: hidden
+    opacity: 0
+    z-index: 0
+    transition: all .3s ease
+    .items-container
+      display: grid
+      grid-template-columns: 1fr 1fr
+      grid-template-rows: 50%
+      grid-row-gap: .4rem
+      grid-column-gap: .4rem
+    .collapse-item
+      height: 0
+      border-radius: .5rem
+      padding-bottom: 50%
+      background-repeat: no-repeat
+      background-position: center
+      background-size: cover
+      position: relative
+      color: #fff
+      text-align: center
+      &:hover .item-overlay
+        height: 100%
+      .item-overlay
+        @include implementOverlay($black-seeThrough)
+        height: 0
+        border-radius: .5rem
+        overflow: hidden
+        transition: all .3s ease
+        text-transform: capitalize
+        display: flex
+        flex-direction: column
+        justify-content: center
+        .item-link
+          font-size: .8rem
+        .item-desc
+          font-size: .6rem
+          margin-bottom: .4rem
+    &.activated
+      // overflow: scroll
+      grid-area: content
+      display: block
+      visibility: visible
+      z-index: 1
+      opacity: 1

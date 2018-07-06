@@ -49,7 +49,7 @@
   },
   {
     "name": "My Blog",
-    "category": "Origin",
+    "category": "Original",
     "link": "./pages/geekbrucy.github.io/index.html",
     "snapshot": "https://image.ibb.co/cd9rD8/blog_site.png",
     "tech": ["vuejs", "axios", "marked.js", "bootstrap", "firebase"],
