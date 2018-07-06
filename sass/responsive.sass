@@ -1,0 +1,84 @@
+@media (min-width: 320px) and (max-width: 812px)
+  #pg-content
+    grid-template-columns: 100%
+    grid-template-rows: minmax(90vh, auto) auto auto
+    grid-template-areas: "profile" "filter" "content"
+    .content-container, .filter-result
+      .cate-title
+        font-size: .6rem
+      .items-container
+        display: flex
+        flex-direction: column
+        .collapse-item
+          margin-bottom: .4rem
+          .item-overlay
+            height: 100%
+          .item-link
+            font-size: .5rem
+          .item-desc
+            font-size: .3rem
+            margin-bottom: .4rem
+    .item-tech
+      font-size: .2rem
+    .tech
+      display: inline-block
+      padding: .1rem .2rem
+      margin-right: .1rem
+      background-color: $black
+      &:last-child
+        margin-right: 0
+  html, body
+    overflow-y: auto
+
+@media (min-width: 813px) and (max-width: 1024px)
+  #pg-content
+    grid-template-rows: 3.2rem calc(100vh - 3rem)
+    .content-container, .filter-result
+      .cate-title
+        font-size: .6rem
+      .items-container
+        display: flex
+        flex-direction: column
+        .collapse-item
+          margin-bottom: .4rem
+          .item-overlay
+            height: 100%
+          .item-link
+            font-size: .6rem
+          .item-desc
+            font-size: .4rem
+            margin-bottom: .4rem
+    .item-tech
+      font-size: .3rem
+    .tech
+      display: inline-block
+      padding: .2rem .3rem
+      margin-right: .1rem
+      background-color: $black
+      &:last-child
+        margin-right: 0
+@media (min-width: 1025px) and (max-width: 1320px)
+  #pg-content
+    grid-template-rows: 3rem calc(100vh - 3rem)
+    .content-container, .filter-result
+      .cate-title
+        font-size: .6rem
+      .items-container
+        .collapse-item
+          margin-bottom: .4rem
+          .item-overlay
+            height: 100%
+          .item-link
+            font-size: .5rem
+          .item-desc
+            font-size: .3rem
+            margin-bottom: .4rem
+    .item-tech
+      font-size: .3rem
+    .tech
+      display: inline-block
+      padding: .3rem .4rem
+      margin-right: .1rem
+      background-color: $black
+      &:last-child
+        margin-right: 0
