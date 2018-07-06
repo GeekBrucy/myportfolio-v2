@@ -1,1 +1,1 @@
-projModule.getData()
+projModule()

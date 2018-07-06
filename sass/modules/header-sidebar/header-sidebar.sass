@@ -61,6 +61,7 @@
     overflow: auto
     .cate-title
       width: 100%
+      height: auto
       display: flex
       justify-content: space-between
       background-color: #fff
@@ -87,9 +88,35 @@
       background-repeat: no-repeat
       background-position: center
       background-size: cover
-      img
-        display: block
-        width: 100%
+      position: relative
+      color: #fff
+      text-align: center
+      &:hover .item-overlay
+        height: 100%
+
+      .item-overlay
+        @include implementOverlay($black-seeThrough)
+        height: 0
+        overflow: hidden
+        transition: all .3s ease
+        text-transform: capitalize
+        display: flex
+        flex-direction: column
+        justify-content: center
+        .item-link
+          font-size: .8rem
+        .item-desc
+          font-size: .6rem
+          margin-bottom: .4rem
+        .item-tech
+          font-size: .4rem
+          .tech
+            display: inline-block
+            padding: .3rem .4rem
+            margin-right: .2rem
+            background-color: $black
+            &:last-child
+              margin-right: 0
     .items-container.open
       height: auto
       visibility: visible
