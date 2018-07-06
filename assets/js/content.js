@@ -57,7 +57,6 @@ var projModule = (function () {
     for (var i = 0; i < len; i++) {
       if (tags[i].clicked) {
         counter--
-        console.log(tags[i].innerText)
         filteredItems = filteredItems.length <= 0 ? allItems.filter(function (el) {
           if (el.tech.indexOf(tags[i].innerText) >= 0) {
             return el
@@ -71,16 +70,10 @@ var projModule = (function () {
     }
     if (counter === len) {
       var cateTitle = document.getElementsByClassName('cate-title')
-      // console.log(allItems)
       for (var i = 0; i < cateTitle.length; i++) {
         var nextSib = cateTitle[i].nextElementSibling
-        console.log(cateTitle[i])
-        console.log(cateTitle[i].innerText)
-        console.log(nextSib)
         var matchedArr = allItems.filter(function (el) {
-          // console.log(el)
           if (cateTitle[i].innerHTML.indexOf(el.category) !== -1) {
-            console.log(el)
             return el
           }
         })
