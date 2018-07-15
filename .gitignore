@@ -5,3 +5,6 @@ test.*
 dist/
 test/
 bak/
+.firebaserc
+firebase.json
+public/
