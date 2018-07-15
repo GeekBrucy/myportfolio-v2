@@ -78,5 +78,13 @@
     "snapshot": "https://image.ibb.co/niEizy/fast.png",
     "tech": ["html5", "css3", "grid", "flexbox"],
     "desc": "a combination of using css3 grid and flexbox"
+  },
+  {
+    "name": "My Portfolio",
+    "category": "Original",
+    "link": "./pages/myportfolio/index.html",
+    "snapshot": "https://image.ibb.co/fi1L6d/myportfolio.png",
+    "tech": ["html5", "css3", "flexbox", "responsive"],
+    "desc": "A previous version of my portfolio"
   }
 ]
