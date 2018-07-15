@@ -5,11 +5,15 @@ var projModule = (function () {
     javascript: '#F7DF1E',
     bootstrap: '#563D7C',
     vuejs: '#41B883',
-    flexbox: '#FFA645',
+    flexbox: '#2aa9d2',
     sass: '#D06A9C',
     ajax: '#1F82C5',
     fetch: '#1FA59C',
-    grid: '#E84E34'
+    grid: '#feb062',
+    responsive: '#7c203a',
+    axios: '#04322e',
+    firebase: '#f8c43a',
+    markedjs: '#f73859'
   }
   var contentContainer = document.getElementsByClassName('content-container')[0]
   var filterResult = document.getElementsByClassName('filter-result')[0]
@@ -198,7 +202,7 @@ var projModule = (function () {
         itemLink.href = temp[j].link
         itemLink.target = 'blank'
         itemLink.classList.add('item-link')
-        itemLink.innerHTML = temp[j].name + '<i class="fas fa-link"></i>'
+        itemLink.innerHTML = temp[j].name + ' <i class="fas fa-link"></i>'
         
         // push into allItems, for easy filter
         var item = {

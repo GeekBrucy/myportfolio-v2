@@ -36,7 +36,7 @@
     "category": "Free Code Camp",
     "link": "./pages/fcc-twitchTV/index.html",
     "snapshot": "https://image.ibb.co/gRTJt8/fcc_twitch.png",
-    "tech": ["html5", "css3", "javascript", "ajax-getJSON", "responsive"],
+    "tech": ["html5", "css3", "javascript", "ajax", "responsive"],
     "desc": "a project from free code camp"
   },
   {
@@ -52,7 +52,7 @@
     "category": "Original",
     "link": "./pages/geekbrucy.github.io/index.html",
     "snapshot": "https://image.ibb.co/cd9rD8/blog_site.png",
-    "tech": ["vuejs", "axios", "marked.js", "bootstrap", "firebase"],
+    "tech": ["vuejs", "axios", "markedjs", "bootstrap", "firebase"],
     "desc": "my blog system"
   },
   {
